@@ -1,0 +1,13 @@
+.button {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.selected {
+  cursor: pointer;
+  padding: 0.5em 1em;
+  border-bottom: 10px solid blueviolet;
+
+  font-family: "Josefin Sans", sans-serif;
+}

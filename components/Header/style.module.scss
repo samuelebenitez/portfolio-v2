@@ -1,0 +1,68 @@
+$mono-font: "Josefin Sans", sans-serif;
+$serif-font: "Yeseva One", cursive;
+
+.header {
+  width: 100vw;
+  height: 20vh;
+  padding: 1em 0;
+  display: grid;
+  place-items: center;
+  background-color: #0e141b;
+  opacity: 0;
+  .inner_container {
+    width: 100%;
+    display: flex;
+    padding: 0 1em;
+    justify-content: space-between;
+    align-items: center;
+    .header_brand > p {
+      font-size: 2em;
+      color: blueviolet;
+      font-family: $serif-font;
+    }
+    .header_nav {
+      .button {
+        width: 3rem;
+        height: 3rem;
+        border: none;
+        border-radius: 50%;
+        background-color: #252526;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        &:hover {
+          .burger1 {
+            transform: translateY(5px) rotate(45deg);
+          }
+          .burger2 {
+            transform: translateY(-5px) rotate(-45deg);
+            background-color: blueviolet;
+            box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.084);
+          }
+        }
+
+        @media (min-width: 768px) {
+          display: none;
+        }
+
+        .burger_bar {
+          width: 1.5rem;
+          height: 3px;
+          background-color: white;
+          border-radius: 5px;
+          transition: all 0.5s;
+        }
+      }
+      .nav_content {
+        display: none;
+
+        @media (min-width: 768px) {
+          display: flex;
+          gap: 2em;
+        }
+      }
+    }
+  }
+}

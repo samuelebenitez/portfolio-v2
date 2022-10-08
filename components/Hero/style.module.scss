@@ -1,0 +1,32 @@
+$mono-font: "Josefin Sans", sans-serif;
+$serif-font: "Yeseva One", cursive;
+
+.hero_container {
+  width: 100vw;
+  height: 60vh;
+
+  padding-inline: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+
+  .pretitle {
+    color: blueviolet;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: $mono-font;
+  }
+  .title {
+    font-size: 2.5rem;
+    letter-spacing: -3px;
+    font-weight: lighter;
+    font-family: $serif-font;
+    margin: 0.2em 0 0.5em 0;
+  }
+  .hero_content > p {
+    font-size: 1.5em;
+    font-weight: 300;
+    font-family: $mono-font;
+  }
+}
