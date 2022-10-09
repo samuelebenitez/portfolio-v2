@@ -1,0 +1,17 @@
+.nav_mobile_content {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 20vh;
+  width: 100vw;
+  height: 80vh;
+  padding: 2em 1em 2em 0;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 20, 27, 1) 0%,
+    rgba(37, 37, 38, 1) 74%,
+    rgba(37, 37, 38, 1) 100%
+  );
+  z-index: 99;
+}

@@ -9,7 +9,7 @@ export default function Hero() {
     gsap.fromTo(
       box.current,
       { yPercent: -5 },
-      { duration: 0.5, opacity: 1, delay: 2, yPercent: 0 }
+      { duration: 0.5, opacity: 1, yPercent: 0 }
     );
   }, []);
 

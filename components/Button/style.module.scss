@@ -5,9 +5,19 @@
 }
 
 .selected {
-  cursor: pointer;
-  padding: 0.5em 1em;
   border-bottom: 10px solid blueviolet;
 
   font-family: "Josefin Sans", sans-serif;
+}
+
+.button_sidebar {
+  cursor: pointer;
+  padding: 0.5em 1em 0 1em;
+  text-transform: capitalize;
+  font-family: "Yeseva One", cursive;
+  font-size: 3em;
+}
+
+.selected_sidebar {
+  border-bottom: 10px solid blueviolet;
 }

@@ -22,6 +22,8 @@ $serif-font: "Yeseva One", cursive;
     }
     .header_nav {
       .button {
+        position: sticky;
+        z-index: 100;
         width: 3rem;
         height: 3rem;
         border: none;

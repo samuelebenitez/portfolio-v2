@@ -1,11 +1,9 @@
 import style from "./style.module.scss";
 import Button from "../Button/index";
-import Image from "next/image";
-import logop from "../../public/logop.webp";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
-export default function Header() {
+export default function Header({ openMenu }) {
   const headerRef = useRef();
 
   useEffect(() => {
@@ -31,7 +29,7 @@ export default function Header() {
         </div>
 
         <div className={style.header_nav}>
-          <button className={style.button}>
+          <button onClick={() => openMenu(true)} className={style.button}>
             <div className={`${style.burger_bar} ${style.burger1}`}></div>
             <div className={`${style.burger_bar} ${style.burger2}`}></div>
           </button>
