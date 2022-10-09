@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
 
-export default function Button({ type, href, label }) {
+export default function Button({ type, href, label, openMenu }) {
   const router = useRouter();
 
   const buttonRef = useRef();
@@ -39,6 +39,7 @@ export default function Button({ type, href, label }) {
             <p
               ref={buttonRef}
               className={`${style.button_sidebar} ${style.selected_sidebar}`}
+              onClick={() => openMenu(false)}
             >
               {label}
             </p>
@@ -47,7 +48,11 @@ export default function Button({ type, href, label }) {
       } else {
         return (
           <Link href={href}>
-            <p ref={buttonRef} className={style.button_sidebar}>
+            <p
+              onClick={() => openMenu(false)}
+              ref={buttonRef}
+              className={style.button_sidebar}
+            >
               {label}{" "}
             </p>
           </Link>

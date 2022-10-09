@@ -12,8 +12,12 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div className={style.app_container}>
-      <Header openMenu={openMenu} />
-      {!isOpen ? <Component {...pageProps} /> : <SidebarMenu />}
+      <Header openMenu={openMenu} isOpen={isOpen} />
+      {!isOpen ? (
+        <Component {...pageProps} />
+      ) : (
+        <SidebarMenu openMenu={openMenu} />
+      )}
     </div>
   );
 }

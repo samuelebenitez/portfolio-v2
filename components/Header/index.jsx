@@ -3,14 +3,14 @@ import Button from "../Button/index";
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 
-export default function Header({ openMenu }) {
+export default function Header({ openMenu, isOpen }) {
   const headerRef = useRef();
 
   useEffect(() => {
     gsap.fromTo(
       headerRef.current,
       { yPercent: -5 },
-      { duration: 0.5, opacity: 1, delay: 2, yPercent: 0 }
+      { duration: 0.5, opacity: 1, yPercent: 0 }
     );
   }, []);
 
@@ -30,8 +30,17 @@ export default function Header({ openMenu }) {
 
         <div className={style.header_nav}>
           <button onClick={() => openMenu(true)} className={style.button}>
-            <div className={`${style.burger_bar} ${style.burger1}`}></div>
-            <div className={`${style.burger_bar} ${style.burger2}`}></div>
+            {isOpen ? (
+              <>
+                <div className={`${style.burger_bar} ${style.burger1}`}></div>
+                <div className={`${style.burger_bar} ${style.burger2}`}></div>
+              </>
+            ) : (
+              <>
+                <div className={`${style.burger_bar} `}></div>
+                <div className={`${style.burger_bar} `}></div>
+              </>
+            )}
           </button>
           <nav className={style.nav_content}>
             {buttonsName.map((button, key) => (

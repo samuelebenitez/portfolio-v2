@@ -3,7 +3,7 @@ import style from "./style.module.scss";
 import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
 
-export default function SidebarMenu() {
+export default function SidebarMenu({ openMenu }) {
   const navRef = useRef();
 
   useEffect(() => {
@@ -28,6 +28,7 @@ export default function SidebarMenu() {
           type="sidebar_button"
           href={button.path}
           label={button.name}
+          openMenu={openMenu}
         />
       ))}
     </nav>
