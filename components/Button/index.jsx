@@ -1,20 +1,26 @@
 import style from "./style.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { gsap } from "gsap";
+import { gsap, Power4 } from "gsap";
 import { useRef, useEffect } from "react";
+import Letter from "../Letter";
 
 export default function Button({ type, href, label, openMenu }) {
   const router = useRouter();
-
   const buttonRef = useRef();
 
   useEffect(() => {
-    gsap.fromTo(
-      buttonRef.current,
-      { yPercent: 100, opacity: 0 },
-      { duration: 0.5, delay: 0.1, yPercent: 0, opacity: 1 }
-    );
+    // gsap.fromTo(
+    //   buttonRef.current,
+    //   { yPercent: 100, opacity: 0, ease: "expo.easeOut" },
+    //   { duration: 0.5, delay: 0.3, yPercent: 0, opacity: 1 }
+    // );
+    gsap.from(buttonRef.current, {
+      duration: 1.5,
+      yPercent: 0,
+      ease: "power4",
+      stagger: 0.1,
+    });
   }, []);
 
   switch (type) {
@@ -22,13 +28,15 @@ export default function Button({ type, href, label, openMenu }) {
       if (router.asPath == href) {
         return (
           <Link href={href}>
-            <p className={`${style.button} ${style.selected}`}>{label} </p>
+            <span className={`${style.button} ${style.selected}`}>
+              {label}{" "}
+            </span>
           </Link>
         );
       } else {
         return (
           <Link href={href}>
-            <p className={style.button}>{label} </p>
+            <span className={style.button}>{label} </span>
           </Link>
         );
       }
@@ -36,25 +44,41 @@ export default function Button({ type, href, label, openMenu }) {
       if (router.asPath == href) {
         return (
           <Link href={href}>
-            <p
+            <span
               ref={buttonRef}
               className={`${style.button_sidebar} ${style.selected_sidebar}`}
               onClick={() => openMenu(false)}
             >
-              {label}
-            </p>
+              {label
+                .split("")
+                .map((i) =>
+                  i == " " ? (
+                    <Letter space={true} letter={i} />
+                  ) : (
+                    <Letter space={false} letter={i} />
+                  )
+                )}
+            </span>
           </Link>
         );
       } else {
         return (
           <Link href={href}>
-            <p
+            <span
               onClick={() => openMenu(false)}
               ref={buttonRef}
               className={style.button_sidebar}
             >
-              {label}{" "}
-            </p>
+              {label
+                .split("")
+                .map((i) =>
+                  i == " " ? (
+                    <Letter space={true} letter={i} />
+                  ) : (
+                    <Letter space={false} letter={i} />
+                  )
+                )}
+            </span>
           </Link>
         );
       }

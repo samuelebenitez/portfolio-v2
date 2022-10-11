@@ -13,9 +13,12 @@
 .button_sidebar {
   cursor: pointer;
   padding: 0.5em 1em 0 1em;
-  text-transform: capitalize;
   font-family: "Yeseva One", cursive;
   font-size: 3em;
+
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
 }
 
 .selected_sidebar {

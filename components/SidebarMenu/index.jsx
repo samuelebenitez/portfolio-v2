@@ -9,7 +9,7 @@ export default function SidebarMenu({ openMenu }) {
   useEffect(() => {
     gsap.fromTo(
       navRef.current,
-      { yPercent: -5 },
+      { yPercent: -5, ease: "expo.easeOut" },
       { duration: 0.5, opacity: 1, yPercent: 0 }
     );
   }, []);

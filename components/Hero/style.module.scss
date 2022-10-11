@@ -13,9 +13,16 @@ $serif-font: "Yeseva One", cursive;
 
   .pretitle {
     color: blueviolet;
-    text-transform: uppercase;
     font-size: 1.2rem;
     font-family: $mono-font;
+
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    &:first-child {
+      text-transform: uppercase;
+    }
   }
   .title {
     font-size: 2.5rem;
@@ -23,10 +30,22 @@ $serif-font: "Yeseva One", cursive;
     font-weight: lighter;
     font-family: $serif-font;
     margin: 0.2em 0 0.5em 0;
+
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
   }
-  .hero_content > p {
-    font-size: 1.5em;
-    font-weight: 300;
-    font-family: $mono-font;
+  .hero_content {
+    width: 90vw;
+    .hero_desc {
+      width: 90vw;
+      font-size: 1.5em;
+      font-weight: 300;
+      font-family: $mono-font;
+
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+    }
   }
 }

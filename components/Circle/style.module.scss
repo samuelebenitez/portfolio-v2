@@ -1,0 +1,24 @@
+.circle {
+  font-size: 1.4em;
+  color: antiquewhite;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  animation: spin 3.5s infinite linear;
+  border-radius: 50%;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.circle > span {
+  position: absolute;
+  margin: 2px;
+  font-family: "Josefin Sans", sans-serif;
+}
