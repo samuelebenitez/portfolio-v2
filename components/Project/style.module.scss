@@ -12,12 +12,13 @@ $serif-font: "Yeseva One", cursive;
   flex-direction: column;
   justify-content: center;
   opacity: 0;
-  gap: 1em;
+  gap: 1.5em;
   width: 90vw;
 
   .project_title {
     font-family: $serif-font;
     font-weight: 400;
+    transform: scaleY(2);
   }
   .project_desc {
     font-family: $mono-font;
@@ -29,10 +30,12 @@ $serif-font: "Yeseva One", cursive;
   }
   .project_buttons {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    padding: 0 2em;
     .link {
       text-decoration: none;
+      padding: 0;
 
       .button {
         font-family: $mono-font;
@@ -40,7 +43,6 @@ $serif-font: "Yeseva One", cursive;
         background-color: transparent;
         border: none;
         display: flex;
-        padding: 0 3em 1em 0;
         align-items: center;
         justify-content: center;
         font-size: 1.8em;
