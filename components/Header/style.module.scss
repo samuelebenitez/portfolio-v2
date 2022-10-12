@@ -7,8 +7,10 @@ $serif-font: "Yeseva One", cursive;
   padding: 1em 0;
   display: grid;
   place-items: center;
-  background-color: #0e141b;
+  position: fixed;
+  background-color: transparent;
   opacity: 0;
+  z-index: 200;
   .inner_container {
     width: 100%;
     display: flex;

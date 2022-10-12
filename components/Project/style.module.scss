@@ -2,19 +2,22 @@ $mono-font: "Josefin Sans", sans-serif;
 $serif-font: "Yeseva One", cursive;
 
 .project_container {
-  padding: 1em;
+  padding: 1em 1em 0 1em;
   border-radius: 24px;
   box-shadow: -1px 3px 28px 7px rgba(0, 0, 0, 0.75);
-  height: 30vh;
-  background-color: rgb(111, 35, 182);
+  height: 35vh;
+  background-color: rgb(44 18 68);
   background-blend-mode: multiply;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   opacity: 0;
+  gap: 1em;
+  width: 90vw;
 
   .project_title {
-    font-family: $mono-font;
+    font-family: $serif-font;
+    font-weight: 400;
   }
   .project_desc {
     font-family: $mono-font;
@@ -26,14 +29,110 @@ $serif-font: "Yeseva One", cursive;
   }
   .project_buttons {
     display: flex;
-    gap: 1em;
-    .button {
-      font-family: $mono-font;
-      padding: 0.5em 1em;
-      text-transform: uppercase;
-      border-radius: 24px;
-      border: none;
-      background-color: rgba(0, 0, 0, 0.473);
+    justify-content: center;
+    align-items: center;
+    .link {
+      text-decoration: none;
+
+      .button {
+        font-family: $mono-font;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        padding: 0 3em 1em 0;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8em;
+        transform: rotateZ(180deg) scaleX(2);
+        animation: flicker-4 4s ease-in infinite both;
+        color: rgb(205, 175, 233);
+
+        text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+          0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px rgb(252, 165, 247),
+          0 0 151px #0fa;
+
+        outline: none;
+
+        @keyframes flicker-4 {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          31.98% {
+            opacity: 1;
+          }
+          32% {
+            opacity: 0;
+          }
+          32.8% {
+            opacity: 0;
+          }
+          32.82% {
+            opacity: 1;
+          }
+          34.98% {
+            opacity: 1;
+          }
+          35% {
+            opacity: 0;
+          }
+          35.7% {
+            opacity: 0;
+          }
+          35.72% {
+            opacity: 1;
+          }
+          36.98% {
+            opacity: 1;
+          }
+          37% {
+            opacity: 0;
+          }
+          37.6% {
+            opacity: 0;
+          }
+          37.62% {
+            opacity: 1;
+          }
+          67.98% {
+            opacity: 1;
+          }
+          68% {
+            opacity: 0;
+          }
+          68.4% {
+            opacity: 0;
+          }
+          68.42% {
+            opacity: 1;
+          }
+          95.98% {
+            opacity: 1;
+          }
+          96% {
+            opacity: 0;
+          }
+          96.7% {
+            opacity: 0;
+          }
+          96.72% {
+            opacity: 1;
+          }
+          98.98% {
+            opacity: 1;
+          }
+          99% {
+            opacity: 0;
+          }
+          99.6% {
+            opacity: 0;
+          }
+          99.62% {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 }

@@ -6,7 +6,7 @@ export default function Projects() {
     {
       title: "Courflix",
       description:
-        "Primer proyecto, hecho en JS Vanilla que simula la home page de Netflix. Uso de librería Slick para crear carrouseles de imágenes. ",
+        "First project, made on Vanilla JS. Simulates Netflix's homepage. ",
       desk: "https://i.ibb.co/6DyP03B/courflix-desktop-img.webp",
       mobile: "https://i.ibb.co/W5XPT60/courflix-responsive-img.webp",
       demo: "https://courflix-vanilla.vercel.app/",
@@ -15,7 +15,7 @@ export default function Projects() {
     {
       title: "Dev.to blog",
       description:
-        "Hecho en Next JS. Implementación de pages, rutas dinámicas y server side rendering",
+        "Made on Next JS. Implementation of pages, dynamic routes and server side rendering.",
       desk: "https://i.ibb.co/DwyBqVD/dev-blog-desktop-img.webp",
       mobile: "https://i.ibb.co/Yp6vDS8/dev-blog-responsive-img.webp",
       demo: "https://devtoblog.vercel.app/",
@@ -24,7 +24,7 @@ export default function Projects() {
     {
       title: "Musikit",
       description:
-        "Esta web simula la home page de Spotify y devuelve los datos reales del usuario gracias a su API oficial. Se pueden observar las playlists, artistas preferidos, albumes, podcasts y canciones. Requiere de una cuenta de spotify para su uso.",
+        "This web simulates Spotify's homepage and return the real data of the user thanks to his oficial API. You can see favorite playlists, artists, albums, podcasts and songs. ",
       desk: "https://i.ibb.co/PtWhy9T/musikit-home-img.webp",
       mobile: "https://i.ibb.co/2sjzHhP/musikitmobile.webp",
       demo: "https://misikit-samuelebenitez.vercel.app/",

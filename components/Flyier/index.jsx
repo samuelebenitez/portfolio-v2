@@ -14,7 +14,6 @@ export default function Flyier({ label }) {
         trigger: wordRef.current,
         start: "top bottom-=10%", // when the top of the trigger hits the top of the viewport
         end: "+=500",
-        markers: true,
       },
     });
 

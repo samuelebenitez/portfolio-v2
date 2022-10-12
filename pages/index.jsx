@@ -8,8 +8,6 @@ export default function Home() {
   return (
     <main className={style.container}>
       <Hero />
-      
-      <Flyier label="• About • About • About • About" />
       <Flyier label="• Demos • Demos • Demos • Demos" />
       <Projects />
     </main>
