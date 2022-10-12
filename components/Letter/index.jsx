@@ -1,16 +1,12 @@
 import style from "./style.module.scss";
-import { gsap } from "gsap";
+import { gsap, Expo } from "gsap";
 import { useEffect, useRef } from "react";
 
 const Letter = ({ space, letter }) => {
   const letterRef = useRef();
 
   useEffect(() => {
-    let textAnimation = gsap.timeline({
-      defaults: {
-        ease: "stepped",
-      },
-    });
+    let textAnimation = gsap.timeline();
     textAnimation.fromTo(
       letterRef.current,
       {
@@ -21,9 +17,10 @@ const Letter = ({ space, letter }) => {
         y: 0,
         opacity: 1,
         delay: 0.5,
+        ease: "expo.easeOut",
         duration: 0.7,
         stagger: {
-          each: 0.01,
+          each: 0.05,
         },
       }
     );

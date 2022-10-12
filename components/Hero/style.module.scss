@@ -19,10 +19,6 @@ $serif-font: "Yeseva One", cursive;
     display: flex;
     flex-direction: row;
     overflow: hidden;
-
-    &:first-child {
-      text-transform: uppercase;
-    }
   }
   .title {
     font-size: 2.5rem;

@@ -10,20 +10,20 @@ export default function Hero() {
   useEffect(() => {
     gsap.fromTo(
       box.current,
-      { yPercent: -50, ease: "expo.easeOut" },
+      { yPercent: -10, ease: "expo.easeOut" },
       { duration: 1, opacity: 1, yPercent: 0 }
     );
     gsap.fromTo(
       spanRef.current,
       { yPercent: -5, ease: "expo.easeOut" },
-      { duration: 2, opacity: 1, yPercent: 0 }
+      { duration: 2, delay: 0.2, opacity: 1, yPercent: 0 }
     );
   }, []);
 
   return (
     <div ref={box} className={style.hero_container}>
       <span ref={spanRef} className={style.pretitle}>
-        {"hello, my name is sam"
+        {"hello, my name is Sam"
           .split("")
           .map((i) =>
             i == " " ? (
@@ -34,7 +34,7 @@ export default function Hero() {
           )}
       </span>
       <h1 span ref={spanRef} className={style.title}>
-        {"I make websites"
+        {"I make websites."
           .split("")
           .map((i) =>
             i == " " ? (

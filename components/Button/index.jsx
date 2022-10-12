@@ -19,7 +19,7 @@ export default function Button({ type, href, label, openMenu }) {
       duration: 1.5,
       yPercent: 0,
       ease: "power4",
-      stagger: 0.1,
+      stagger: 0.09,
     });
   }, []);
 

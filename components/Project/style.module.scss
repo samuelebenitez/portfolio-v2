@@ -1,0 +1,39 @@
+$mono-font: "Josefin Sans", sans-serif;
+$serif-font: "Yeseva One", cursive;
+
+.project_container {
+  padding: 1em;
+  border-radius: 24px;
+  box-shadow: -1px 3px 28px 7px rgba(0, 0, 0, 0.75);
+  height: 30vh;
+  background-color: rgb(111, 35, 182);
+  background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  opacity: 0;
+
+  .project_title {
+    font-family: $mono-font;
+  }
+  .project_desc {
+    font-family: $mono-font;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 300;
+  }
+  .project_buttons {
+    display: flex;
+    gap: 1em;
+    .button {
+      font-family: $mono-font;
+      padding: 0.5em 1em;
+      text-transform: uppercase;
+      border-radius: 24px;
+      border: none;
+      background-color: rgba(0, 0, 0, 0.473);
+    }
+  }
+}
