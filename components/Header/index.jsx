@@ -1,17 +1,49 @@
 import style from "./style.module.scss";
 import Button from "../Button/index";
-import { gsap } from "gsap";
+import { gsap, Expo } from "gsap";
 import { useEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Header({ openMenu, isOpen }) {
   const headerRef = useRef();
-
   useEffect(() => {
-    gsap.fromTo(
-      headerRef.current,
-      { yPercent: -5 },
-      { duration: 0.5, opacity: 1, yPercent: 0 }
-    );
+    let ctx = gsap.context(() => {
+      gsap.fromTo(
+        headerRef.current,
+        { yPercent: -5 },
+        {
+          duration: 0.5,
+          opacity: 1,
+          yPercent: 0,
+        }
+      );
+
+      gsap.fromTo(
+        headerRef.current,
+        { backgroundColor: "transparent" },
+        {
+          duration: 0.1,
+          scrollTrigger: {
+            trigger: headerRef.current,
+            start: "=+50",
+            end: "=0",
+            ease: "expo",
+            onLeave: () =>
+              gsap.to(headerRef.current, {
+                backgroundColor: "rgba(0, 0, 0, 0.548)",
+              }),
+            onEnterBack: () =>
+              gsap.to(headerRef.current, {
+                backgroundColor: "transparent",
+              }),
+          },
+        }
+      );
+    }, []);
+
+    return () => ctx.revert();
   }, []);
 
   const buttonsName = [

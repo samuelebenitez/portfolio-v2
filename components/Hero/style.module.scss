@@ -19,6 +19,9 @@ $serif-font: "Yeseva One", cursive;
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    @media (min-width: 425px) {
+      font-size: 1.5rem;
+    }
   }
   .title {
     font-size: 2.5rem;
@@ -30,6 +33,10 @@ $serif-font: "Yeseva One", cursive;
     display: flex;
     flex-direction: row;
     overflow: hidden;
+
+    @media (min-width: 425px) {
+      font-size: 3rem;
+    }
   }
   .hero_content {
     width: 90vw;
@@ -42,6 +49,9 @@ $serif-font: "Yeseva One", cursive;
       display: flex;
       flex-direction: row;
       overflow: hidden;
+      @media (min-width: 425px) {
+        font-size: 1.7rem;
+      }
     }
   }
 }

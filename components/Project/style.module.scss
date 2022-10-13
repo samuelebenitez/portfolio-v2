@@ -2,23 +2,25 @@ $mono-font: "Josefin Sans", sans-serif;
 $serif-font: "Yeseva One", cursive;
 
 .project_container {
-  padding: 1em 1em 0 1em;
+  padding: 2em 1em 0 1em;
   border-radius: 24px;
   box-shadow: -1px 3px 28px 7px rgba(0, 0, 0, 0.75);
-  height: 35vh;
+
   background-color: rgb(44 18 68);
   background-blend-mode: multiply;
   display: flex;
   flex-direction: column;
   justify-content: center;
   opacity: 0;
-  gap: 1.5em;
+  gap: 2.5em;
   width: 90vw;
+  overflow: hidden;
 
   .project_title {
     font-family: $serif-font;
     font-weight: 400;
-    transform: scaleY(2);
+
+    transform: scaleY(2.5);
   }
   .project_desc {
     font-family: $mono-font;
@@ -27,6 +29,8 @@ $serif-font: "Yeseva One", cursive;
     -webkit-box-orient: vertical;
     overflow: hidden;
     font-weight: 300;
+
+    transform: scaleY(1.3);
   }
   .project_buttons {
     display: flex;
