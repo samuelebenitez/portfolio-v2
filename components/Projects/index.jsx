@@ -4,13 +4,13 @@ import Project from "../Project";
 export default function Projects() {
   const projects = [
     {
-      title: "Courflix",
+      title: "Musikit",
       description:
-        "First project, made on Vanilla JS. Simulates Netflix's homepage. ",
-      desk: "https://i.ibb.co/6DyP03B/courflix-desktop-img.webp",
-      mobile: "https://i.ibb.co/W5XPT60/courflix-responsive-img.webp",
-      demo: "https://courflix-vanilla.vercel.app/",
-      repo: "https://github.com/samuelebenitez/CourflixVanilla",
+        "This web simulates Spotify's homepage and return the real data of the user thanks to his oficial API. You can see favorite playlists, artists, albums, podcasts and songs. ",
+      desk: "https://i.ibb.co/PtWhy9T/musikit-home-img.webp",
+      mobile: "https://i.ibb.co/2sjzHhP/musikitmobile.webp",
+      demo: "https://misikit-samuelebenitez.vercel.app/",
+      repo: "https://github.com/samuelebenitez/musikit",
     },
     {
       title: "Dev.to blog",
@@ -22,13 +22,13 @@ export default function Projects() {
       repo: "https://github.com/samuelebenitez/dev-to-blog",
     },
     {
-      title: "Musikit",
+      title: "Courflix",
       description:
-        "This web simulates Spotify's homepage and return the real data of the user thanks to his oficial API. You can see favorite playlists, artists, albums, podcasts and songs. ",
-      desk: "https://i.ibb.co/PtWhy9T/musikit-home-img.webp",
-      mobile: "https://i.ibb.co/2sjzHhP/musikitmobile.webp",
-      demo: "https://misikit-samuelebenitez.vercel.app/",
-      repo: "https://github.com/samuelebenitez/musikit",
+        "First project, made on Vanilla JS. Simulates Netflix's homepage. ",
+      desk: "https://i.ibb.co/6DyP03B/courflix-desktop-img.webp",
+      mobile: "https://i.ibb.co/W5XPT60/courflix-responsive-img.webp",
+      demo: "https://courflix-vanilla.vercel.app/",
+      repo: "https://github.com/samuelebenitez/CourflixVanilla",
     },
   ];
 

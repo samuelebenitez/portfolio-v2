@@ -32,7 +32,7 @@ export default function Header({ openMenu, isOpen }) {
             ease: "expo",
             onLeave: () =>
               gsap.to(headerRef.current, {
-                backgroundColor: "rgba(0, 0, 0, 0.548)",
+                backgroundColor: "#252526",
               }),
             onEnterBack: () =>
               gsap.to(headerRef.current, {
