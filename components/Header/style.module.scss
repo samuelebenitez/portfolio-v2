@@ -18,10 +18,110 @@ $serif-font: "Yeseva One", cursive;
     padding: 0 1em;
     justify-content: space-between;
     align-items: center;
+    .header_brand {
+      display: flex;
+      align-items: flex-end;
+    }
     .header_brand > p {
       font-size: 2em;
       color: blueviolet;
       font-family: $serif-font;
+
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      animation: flicker-4 4s ease-in infinite both;
+      color: rgb(205, 175, 233);
+
+      text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+        0 0 42px rgb(236, 175, 231), 0 0 82px rgb(247, 185, 247),
+        0 0 92px rgb(255, 178, 249), 0 0 102px rgb(252, 165, 247),
+        0 0 151px rgb(243, 110, 225);
+
+      outline: none;
+
+      @keyframes flicker-4 {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        31.98% {
+          opacity: 1;
+        }
+        32% {
+          opacity: 0;
+        }
+        32.8% {
+          opacity: 0;
+        }
+        32.82% {
+          opacity: 1;
+        }
+        34.98% {
+          opacity: 1;
+        }
+        35% {
+          opacity: 0;
+        }
+        35.7% {
+          opacity: 0;
+        }
+        35.72% {
+          opacity: 1;
+        }
+        36.98% {
+          opacity: 1;
+        }
+        37% {
+          opacity: 0;
+        }
+        37.6% {
+          opacity: 0;
+        }
+        37.62% {
+          opacity: 1;
+        }
+        67.98% {
+          opacity: 1;
+        }
+        68% {
+          opacity: 0;
+        }
+        68.4% {
+          opacity: 0;
+        }
+        68.42% {
+          opacity: 1;
+        }
+        95.98% {
+          opacity: 1;
+        }
+        96% {
+          opacity: 0;
+        }
+        96.7% {
+          opacity: 0;
+        }
+        96.72% {
+          opacity: 1;
+        }
+        98.98% {
+          opacity: 1;
+        }
+        99% {
+          opacity: 0;
+        }
+        99.6% {
+          opacity: 0;
+        }
+        99.62% {
+          opacity: 1;
+        }
+      }
     }
     .header_nav {
       .button {
@@ -31,7 +131,7 @@ $serif-font: "Yeseva One", cursive;
         height: 3rem;
         border: none;
         border-radius: 50%;
-        background-color: #252526;
+        background-color: #0e141bb6;
         display: flex;
         flex-direction: column;
         align-items: center;
