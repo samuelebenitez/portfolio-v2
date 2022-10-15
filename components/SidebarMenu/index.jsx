@@ -16,7 +16,6 @@ export default function SidebarMenu({ openMenu }) {
 
   const buttonsName = [
     { name: "home", path: "/" },
-    { name: "demos", path: "/demos" },
     { name: "about", path: "/about" },
     { name: "others", path: "/others" },
   ];

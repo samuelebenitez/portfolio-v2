@@ -29,7 +29,7 @@ $serif-font: "Yeseva One", cursive;
     font-weight: lighter;
     font-family: $serif-font;
     margin: 0.2em 0 0.5em 0;
-
+    color: #fae8b7;
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -45,7 +45,7 @@ $serif-font: "Yeseva One", cursive;
       font-size: 1.5em;
       font-weight: 300;
       font-family: $mono-font;
-
+      color: #fae8b7;
       display: flex;
       flex-direction: row;
       overflow: hidden;

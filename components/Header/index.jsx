@@ -68,7 +68,6 @@ export default function Header({ openMenu, isOpen }) {
           </div>
         ) : (
           <>
-            {" "}
             <div className={style.header_brand}>
               <p>SEB</p>
             </div>
