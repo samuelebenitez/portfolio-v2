@@ -1,0 +1,138 @@
+$dark-theme-primary-color: #1e212d;
+$normal-theme-primary-color: #fae8b7;
+$secondary-color: #b68973;
+$terciary-color: #eabf9f;
+$primary-font-family: "Montserrat", sans-serif;
+
+$mono-font: "Josefin Sans", sans-serif;
+$serif-font: "Yeseva One", cursive;
+
+$secondary-font-family: "Meddon", cursive;
+$total-width: 100vw;
+
+.projectpage_container {
+  background-image: url("../../public/radial.svg");
+
+  background-repeat: repeat;
+  background-size: cover;
+  padding: 25vh 1em 1em 1em;
+  background-position: -20px -40vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  .project_title {
+    color: $normal-theme-primary-color;
+    font-family: $serif-font;
+    text-transform: uppercase;
+    transform: scaleY(2);
+  }
+  .imgs_container {
+    display: flex;
+    flex-direction: column;
+
+    .img1 {
+      width: 80vw;
+      border-radius: 8px;
+      filter: sepia(0.8);
+
+      @media (min-width: 768px) {
+        width: 90vw;
+      }
+    }
+  }
+  .h3 {
+    color: $normal-theme-primary-color;
+    font-family: $primary-font-family;
+    text-transform: capitalize;
+    font-weight: 400;
+    text-decoration: underline;
+    font-size: 1.5em;
+    @media (min-width: 768px) {
+      font-size: 1.7em;
+    }
+  }
+  .description_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    .project_description {
+      color: $normal-theme-primary-color;
+      font-family: $mono-font;
+      font-weight: 300;
+      transform: scaleY(1.2);
+      @media (min-width: 768px) {
+        font-size: 1.3em;
+      }
+    }
+    .icons {
+      display: flex;
+      gap: 1em;
+      justify-content: center;
+      span {
+        svg {
+          color: $normal-theme-primary-color;
+          width: 48px;
+          height: 48px;
+          margin: 0.5em;
+        }
+      }
+    }
+
+    .buttons {
+      font-family: $mono-font;
+      display: flex;
+      font-weight: 500;
+      gap: 1em;
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 2em;
+      }
+
+      .button_git {
+        width: 80vw;
+        height: 10vh;
+        border: 1px solid $normal-theme-primary-color;
+        color: $normal-theme-primary-color;
+        background-color: transparent;
+        text-transform: capitalize;
+        font-size: 1em;
+        margin-top: 1em;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        font-family: $mono-font;
+
+        @media (min-width: 768px) {
+          width: 40vw;
+        }
+      }
+      .button_depl {
+        width: 80vw;
+        height: 10vh;
+        border: 1px solid $dark-theme-primary-color;
+        color: $dark-theme-primary-color;
+        background-color: $normal-theme-primary-color;
+        text-transform: capitalize;
+        font-size: 1em;
+        margin-top: 1em;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-decoration: none;
+
+        font-family: $mono-font;
+
+        @media (min-width: 768px) {
+          width: 40vw;
+        }
+      }
+    }
+  }
+}

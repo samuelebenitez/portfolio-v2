@@ -35,7 +35,7 @@ export default function Project({ proje }) {
     );
   }, []);
 
-  const { title, description, mobile, desk, repo, demo } = proje;
+  const { title, description, mobile, desk, repo, demo, id } = proje;
   return (
     <div
       ref={projectRef}
@@ -45,12 +45,7 @@ export default function Project({ proje }) {
       <h2 className={style.project_title}>{title}</h2>
       <p className={style.project_desc}>{description}</p>
       <div className={style.project_buttons}>
-        <a
-          className={style.link}
-          href={repo}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a className={style.link} href={`/Demos/${id}`}>
           <button className={style.button}>⬳</button>
         </a>
       </div>

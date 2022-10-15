@@ -1,0 +1,20 @@
+$mono-font: "Josefin Sans", sans-serif;
+$serif-font: "Yeseva One", cursive;
+
+.footer_container {
+  padding: 2em 0;
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+  }
+  .icon > p {
+    font-family: $mono-font;
+  }
+}
