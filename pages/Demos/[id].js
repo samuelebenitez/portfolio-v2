@@ -73,10 +73,12 @@ export default function ProjectPage() {
     <>
       {selectedProject.map((pr, key) => (
         <div className={style.projectpage_container} key={key}>
-          <h1 className={style.project_title}>{pr.title}</h1>
+          <div className={style.title_container}>
+            <h1 className={style.project_title}>{pr.title}</h1>
 
-          <div className={style.imgs_container}>
-            <img className={style.img1} src={pr.desk} alt="" />
+            <div className={style.imgs_container}>
+              <img className={style.img1} src={pr.desk} alt="" />
+            </div>
           </div>
 
           <div className={style.description_container}>

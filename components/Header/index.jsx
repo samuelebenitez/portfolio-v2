@@ -54,7 +54,6 @@ export default function Header({ openMenu, isOpen }) {
 
   const buttonsName = [
     { name: "home", path: "/" },
-    { name: "demos", path: "/demos" },
     { name: "about", path: "/about" },
     { name: "others", path: "/others" },
   ];
