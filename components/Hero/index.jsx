@@ -25,22 +25,22 @@ export default function Hero() {
       <span ref={spanRef} className={style.pretitle}>
         {"hello, my name is Sam"
           .split("")
-          .map((i) =>
+          .map((i, key) =>
             i == " " ? (
-              <Letter space={true} letter={i} key={i} />
+              <Letter key={key} space={true} letter={i} />
             ) : (
-              <Letter space={false} letter={i} key={i} />
+              <Letter key={key} space={false} letter={i} />
             )
           )}
       </span>
-      <h1 span ref={spanRef} className={style.title}>
+      <h1 ref={spanRef} className={style.title}>
         {"I make websites."
           .split("")
-          .map((i) =>
+          .map((i, key) =>
             i == " " ? (
-              <Letter space={true} letter={i} />
+              <Letter key={key} space={true} letter={i} />
             ) : (
-              <Letter space={false} letter={i} />
+              <Letter key={key} space={false} letter={i} />
             )
           )}
       </h1>

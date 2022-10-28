@@ -75,9 +75,36 @@ export default function ProjectPage() {
         <div className={style.projectpage_container} key={key}>
           <div className={style.title_container}>
             <h1 className={style.project_title}>{pr.title}</h1>
+            <div className={style.arrows}>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
 
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+            </div>
             <div className={style.imgs_container}>
               <img className={style.img1} src={pr.desk} alt="" />
+            </div>
+            <div className={style.arrows}>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
+              <span className={style.arrow}>⭗</span>
             </div>
           </div>
 
@@ -92,18 +119,18 @@ export default function ProjectPage() {
               <a
                 target="_blank"
                 href={pr.demo}
-                className={style.button_depl}
+                className={`${style.button} ${style.depl} `}
                 rel="noopener noreferrer"
               >
-                Website
+                Website ⭧
               </a>
               <a
                 target="_blank"
                 href={pr.repo}
-                className={style.button_git}
+                className={`${style.button} ${style.git} `}
                 rel="noopener noreferrer"
               >
-                Code
+                Code ⬿
               </a>
             </div>
           </div>

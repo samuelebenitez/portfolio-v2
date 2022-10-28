@@ -51,11 +51,11 @@ export default function Button({ type, href, label, openMenu }) {
             >
               {label
                 .split("")
-                .map((i) =>
+                .map((i, key) =>
                   i == " " ? (
-                    <Letter space={true} letter={i} />
+                    <Letter key={key} space={true} letter={i} />
                   ) : (
-                    <Letter space={false} letter={i} />
+                    <Letter key={key} space={false} letter={i} />
                   )
                 )}
             </span>
@@ -71,11 +71,11 @@ export default function Button({ type, href, label, openMenu }) {
             >
               {label
                 .split("")
-                .map((i) =>
+                .map((i, key) =>
                   i == " " ? (
-                    <Letter space={true} letter={i} />
+                    <Letter key={key} space={true} letter={i} />
                   ) : (
-                    <Letter space={false} letter={i} />
+                    <Letter key={key} space={false} letter={i} />
                   )
                 )}
             </span>
