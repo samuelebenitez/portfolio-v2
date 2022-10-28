@@ -2,7 +2,7 @@ import style from "./style.module.scss";
 import { gsap, Expo } from "gsap";
 import { useEffect, useRef } from "react";
 
-const Letter = ({ space, letter }) => {
+const Letter = ({ space, letter, font }) => {
   const letterRef = useRef();
 
   useEffect(() => {
@@ -31,9 +31,17 @@ const Letter = ({ space, letter }) => {
       &nbsp;
     </div>
   ) : (
-    <div ref={letterRef} className={style.letter}>
-      {letter}
-    </div>
+    <>
+      {font == "sans" ? (
+        <div ref={letterRef} className={style.letter_sans}>
+          {letter}
+        </div>
+      ) : (
+        <div ref={letterRef} className={style.letter_serif}>
+          {letter}
+        </div>
+      )}
+    </>
   );
 };
 

@@ -20,10 +20,11 @@ $serif-font: "Yeseva One", cursive;
     align-items: center;
     .header_brand {
       display: flex;
-      align-items: flex-end;
+      align-items: center;
+      padding: 1em;
     }
     .header_brand > p {
-      font-size: 2em;
+      font-size: 2.5em;
       color: blueviolet;
       font-family: $serif-font;
 

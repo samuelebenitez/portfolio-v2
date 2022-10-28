@@ -27,9 +27,9 @@ export default function Hero() {
           .split("")
           .map((i, key) =>
             i == " " ? (
-              <Letter key={key} space={true} letter={i} />
+              <Letter key={key} space={true} letter={i} font="sans" />
             ) : (
-              <Letter key={key} space={false} letter={i} />
+              <Letter key={key} space={false} letter={i} font="sans" />
             )
           )}
       </span>
@@ -38,9 +38,9 @@ export default function Hero() {
           .split("")
           .map((i, key) =>
             i == " " ? (
-              <Letter key={key} space={true} letter={i} />
+              <Letter key={key} space={true} letter={i} font="serif" />
             ) : (
-              <Letter key={key} space={false} letter={i} />
+              <Letter key={key} space={false} letter={i} font="serif" />
             )
           )}
       </h1>

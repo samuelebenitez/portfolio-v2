@@ -16,6 +16,10 @@ $serif-font: "Yeseva One", cursive;
   width: 90vw;
   overflow: hidden;
 
+  @media (min-width: 768px) {
+    width: 28vw;
+  }
+
   .project_title {
     font-family: $serif-font;
     font-weight: 400;

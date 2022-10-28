@@ -68,7 +68,7 @@ export default function Header({ openMenu, isOpen }) {
         ) : (
           <>
             <div className={style.header_brand}>
-              <p>SEB</p>
+              <p>⚜</p>
             </div>
             <div className={style.header_nav}>
               <button onClick={() => openMenu(true)} className={style.button}>
