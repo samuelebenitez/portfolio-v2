@@ -7,11 +7,15 @@ export default function SidebarMenu({ openMenu }) {
   const navRef = useRef();
 
   useEffect(() => {
-    gsap.fromTo(
-      navRef.current,
-      { yPercent: -5, ease: "expo.easeOut" },
-      { duration: 0.5, opacity: 1, yPercent: 0 }
-    );
+    let ctx = gsap.context(() => {
+      gsap.fromTo(
+        navRef.current,
+        { yPercent: -5, ease: "expo.easeOut" },
+        { duration: 0.5, opacity: 1, yPercent: 0 }
+      );
+    }, []);
+
+    return () => ctx.revert();
   }, []);
 
   const buttonsName = [

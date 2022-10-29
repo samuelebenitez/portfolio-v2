@@ -12,7 +12,6 @@ export default function Header({ openMenu, isOpen }) {
   const router = useRouter();
   const headerRef = useRef();
 
-  console.log(router.asPath);
 
   useEffect(() => {
     let ctx = gsap.context(() => {

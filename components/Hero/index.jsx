@@ -8,16 +8,20 @@ export default function Hero() {
   const spanRef = useRef();
 
   useEffect(() => {
-    gsap.fromTo(
-      box.current,
-      { yPercent: -10, ease: "expo.easeOut" },
-      { duration: 1, delay: 0.2, opacity: 1, yPercent: 0 }
-    );
-    gsap.fromTo(
-      spanRef.current,
-      { yPercent: -5, ease: "expo.easeOut" },
-      { duration: 2, delay: 0.2, opacity: 1, yPercent: 0 }
-    );
+    let ctx = gsap.context(() => {
+      gsap.fromTo(
+        box.current,
+        { yPercent: -10, ease: "expo.easeOut" },
+        { duration: 1, delay: 0.2, opacity: 1, yPercent: 0 }
+      );
+      gsap.fromTo(
+        spanRef.current,
+        { yPercent: -5, ease: "expo.easeOut" },
+        { duration: 2, delay: 0.2, opacity: 1, yPercent: 0 }
+      );
+    }, []);
+
+    return () => ctx.revert();
   }, []);
 
   return (

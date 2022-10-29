@@ -16,8 +16,6 @@ export default function ProjectPage() {
 
   const selectedProject = projects.filter((project) => project.id == id);
 
-  console.log(id);
-
   function renderLargeDesc(id) {
     switch (id) {
       case 3:

@@ -13,14 +13,15 @@ $serif-font: "Yeseva One", cursive;
 
   .pretitle {
     color: #8a2be2;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: $mono-font;
-
+    font-weight: 300;
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    text-transform: uppercase;
     @media (min-width: 425px) {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
   .title {

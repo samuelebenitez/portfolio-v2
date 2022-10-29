@@ -8,31 +8,35 @@ export default function Project({ proje }) {
   const projectRef = useRef();
 
   useEffect(() => {
-    let tl = gsap.timeline({
-      delay: 0.1,
-      scrollTrigger: {
-        trigger: projectRef.current,
-        start: "top bottom-=10%", // when the top of the trigger hits the top of the viewport
-        end: "+=500",
-      },
-    });
-
-    tl.fromTo(
-      projectRef.current,
-      {
-        y: 50,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        delay: 0.5,
-        ease: "expo.easeOut",
-        duration: 1,
-        stagger: {
-          each: 0.05,
+    let ctx = gsap.context(() => {
+      let tl = gsap.timeline({
+        delay: 0.1,
+        scrollTrigger: {
+          trigger: projectRef.current,
+          start: "top bottom-=10%", // when the top of the trigger hits the top of the viewport
+          end: "+=500",
         },
-      }
-    );
+      });
+
+      tl.fromTo(
+        projectRef.current,
+        {
+          y: 50,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          delay: 0.5,
+          ease: "expo.easeOut",
+          duration: 1,
+          stagger: {
+            each: 0.05,
+          },
+        }
+      );
+    }, []);
+
+    return () => ctx.revert();
   }, []);
 
   const { title, description, mobile, desk, repo, demo, id } = proje;

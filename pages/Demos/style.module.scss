@@ -20,7 +20,7 @@ $total-width: 100vw;
   flex-direction: column;
   gap: 2em;
   width: 100vw;
-  height: 100%;
+  min-height: 100vh;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: center;
@@ -36,7 +36,7 @@ $total-width: 100vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 3em;
+      gap: 2em;
       width: 50%;
     }
 
@@ -152,7 +152,7 @@ $total-width: 100vw;
       display: flex;
       flex-direction: column;
       box-shadow: -1px 3px 28px 7px rgba(0, 0, 0, 0.75);
-      margin: -1em 0;
+      margin: -1.5em 0;
       .img1 {
         width: 100%;
         border-radius: 8px;

@@ -10,17 +10,16 @@ export default function Button({ type, href, label, openMenu }) {
   const buttonRef = useRef();
 
   useEffect(() => {
-    // gsap.fromTo(
-    //   buttonRef.current,
-    //   { yPercent: 100, opacity: 0, ease: "expo.easeOut" },
-    //   { duration: 0.5, delay: 0.3, yPercent: 0, opacity: 1 }
-    // );
-    gsap.from(buttonRef.current, {
-      duration: 1.5,
-      yPercent: 0,
-      ease: "power4",
-      stagger: 0.09,
-    });
+    let ctx = gsap.context(() => {
+      gsap.from(buttonRef.current, {
+        duration: 1.5,
+        yPercent: 0,
+        ease: "power4",
+        stagger: 0.09,
+      });
+    }, []);
+
+    return () => ctx.revert();
   }, []);
 
   switch (type) {
