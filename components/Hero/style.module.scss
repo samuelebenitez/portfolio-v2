@@ -1,58 +1,78 @@
 $mono-font: "Josefin Sans", sans-serif;
 $serif-font: "Yeseva One", cursive;
 
-.hero_container {
-  width: 100%;
-  height: 60vh;
-
-  padding-inline: 1rem;
+.hero {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  opacity: 0;
 
-  .pretitle {
-    color: #8a2be2;
-    font-size: 1.1rem;
-    font-family: $mono-font;
-    font-weight: 300;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    text-transform: uppercase;
-    @media (min-width: 425px) {
-      font-size: 1.2rem;
-    }
-  }
-  .title {
-    font-size: 2.5rem;
-    letter-spacing: -3px;
-    font-weight: lighter;
-    font-family: $serif-font;
-    margin: 0.2em 0 0.5em 0;
-    color: #fae8b7;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
+  .hero_container {
+    width: 100%;
+    height: 60vh;
 
-    @media (min-width: 425px) {
-      font-size: 3rem;
+    padding-inline: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+
+    @media (min-width: 1024px) {
+      width: 70%;
     }
-  }
-  .hero_content {
-    width: 90vw;
-    .hero_desc {
-      width: 90vw;
-      font-size: 1.5em;
-      font-weight: 300;
+
+    .pretitle {
+      color: #8a2be2;
+      font-size: 1.1rem;
       font-family: $mono-font;
+      font-weight: 300;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      text-transform: uppercase;
+      @media (min-width: 425px) {
+        font-size: 1.2rem;
+      }
+      @media (min-width: 1024px) {
+        font-weight: 500;
+      }
+    }
+    .title {
+      font-size: 2.5rem;
+      letter-spacing: -3px;
+      font-weight: lighter;
+      font-family: $serif-font;
+      margin: 0.2em 0 0.5em 0;
       color: #fae8b7;
       display: flex;
       flex-direction: row;
       overflow: hidden;
+
       @media (min-width: 425px) {
-        font-size: 1.7rem;
+        font-size: 3rem;
+      }
+      @media (min-width: 1024px) {
+        font-size: 5rem;
       }
     }
+    .hero_content {
+      width: 90vw;
+      .hero_desc {
+        width: 90vw;
+        font-size: 1.5em;
+        font-weight: 300;
+        font-family: $mono-font;
+        color: #fae8b7;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        @media (min-width: 425px) {
+          font-size: 1.7rem;
+        }
+        @media (min-width: 1024px) {
+          width: 60vw;
+        }
+      }
+    }
+  }
+  .flyer {
+    width: 30%;
   }
 }

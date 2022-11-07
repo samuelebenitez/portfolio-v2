@@ -8,11 +8,49 @@ import {
   reactIcon,
   nextjsIcon,
   backIcon,
+  githubIcon,
 } from "../../public/svg-resources.js";
+
+import { SwitchTransition, Transition } from "react-transition-group";
+import { gsap, Power3 } from "gsap";
 
 export default function ProjectPage() {
   const router = useRouter();
   const { id } = router.query;
+
+  const onPageEnter = (node) => {
+    gsap.fromTo(
+      node,
+      {
+        y: 50,
+        autoAlpha: 0,
+        ease: "power3",
+      },
+      {
+        y: 0,
+        autoAlpha: 1,
+        duration: 1,
+        ease: "power3",
+      }
+    );
+  };
+
+  const onPageExit = (node) => {
+    gsap.fromTo(
+      node,
+      {
+        y: 0,
+        autoAlpha: 1,
+        ease: "power3.out",
+      },
+      {
+        y: -50,
+        autoAlpha: 0,
+        duration: 0.5,
+        ease: "power3.inOut",
+      }
+    );
+  };
 
   const selectedProject = projects.filter((project) => project.id == id);
 
@@ -68,72 +106,86 @@ export default function ProjectPage() {
   };
 
   return (
-    <>
-      {selectedProject.map((pr, key) => (
-        <div className={style.projectpage_container} key={key}>
-          <div className={style.title_container}>
-            <h1 className={style.project_title}>{pr.title}</h1>
-            <div className={style.arrows}>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
+    <SwitchTransition>
+      <Transition
+        key={router.pathname}
+        timeout={500}
+        in={true}
+        onEnter={onPageEnter}
+        onExit={onPageExit}
+        mountOnEnter={true}
+        unmountOnExit={true}
+      >
+        <>
+          {selectedProject.map((pr, key) => (
+            <div className={style.projectpage_container} key={key}>
+              <div className={style.title_container}>
+                <h1 className={style.project_title}>{pr.title}</h1>
+                <div className={style.arrows}>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
 
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-            </div>
-            <div className={style.imgs_container}>
-              <img className={style.img1} src={pr.desk} alt="" />
-            </div>
-            <div className={style.arrows}>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                </div>
+                <div className={style.imgs_container}>
+                  <img className={style.img1} src={pr.desk} alt="" />
+                </div>
+                <div className={style.arrows}>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
 
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-              <span className={style.arrow}>⭗</span>
-            </div>
-          </div>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                  <span className={style.arrow}>⭗</span>
+                </div>
+              </div>
 
-          <div className={style.description_container}>
-            {renderLargeDesc(pr.id)}
+              <div className={style.description_container}>
+                {renderLargeDesc(pr.id)}
 
-            <div className={style.icons}>
-              {pr.lenguages.map((lenguage, key) => selectedIcon(lenguage, key))}
-            </div>
+                <div className={style.icons}>
+                  {pr.lenguages.map((lenguage, key) =>
+                    selectedIcon(lenguage, key)
+                  )}
+                </div>
 
-            <div className={style.buttons}>
-              <a
-                target="_blank"
-                href={pr.demo}
-                className={`${style.button} ${style.depl} `}
-                rel="noopener noreferrer"
-              >
-                Website ⭧
-              </a>
-              <a
-                target="_blank"
-                href={pr.repo}
-                className={`${style.button} ${style.git} `}
-                rel="noopener noreferrer"
-              >
-                Code ⬿
-              </a>
+                <div className={style.buttons}>
+                  <a
+                    target="_blank"
+                    href={pr.demo}
+                    className={`${style.button} ${style.depl} `}
+                    rel="noopener noreferrer"
+                  >
+                    Website ⭧
+                  </a>
+                  <a
+                    target="_blank"
+                    href={pr.repo}
+                    className={`${style.button} ${style.git} `}
+                    rel="noopener noreferrer"
+                  >
+                    Code {githubIcon}
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      ))}
-    </>
+          ))}
+        </>
+      </Transition>
+    </SwitchTransition>
   );
 }

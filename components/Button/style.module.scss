@@ -2,11 +2,14 @@
   padding: 0.5em 1em;
   cursor: pointer;
   font-family: "Josefin Sans", sans-serif;
+  text-transform: capitalize;
+  font-weight: 300;
+  color: #fae8b7;
 }
 
 .selected {
   border-bottom: 10px solid blueviolet;
-
+  font-weight: 400;
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -15,6 +18,7 @@
   padding: 0.5em 1em 0 1em;
   font-family: "Yeseva One", cursive;
   font-size: 3em;
+  color: #fae8b7;
 
   display: flex;
   flex-direction: row;

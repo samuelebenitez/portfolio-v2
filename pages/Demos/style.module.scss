@@ -21,6 +21,7 @@ $total-width: 100vw;
   gap: 2em;
   width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: center;
@@ -218,18 +219,19 @@ $total-width: 100vw;
       }
 
       .button {
-        font-size: 1em;
+        font-size: 1.1em;
         font-weight: 600;
         display: flex;
         align-items: center;
+        gap: 0.5em;
         justify-content: center;
         text-decoration: none;
         border-radius: 8px;
         width: 80vw;
         height: 10vh;
-        border: 1px solid $normal-theme-primary-color;
         text-transform: capitalize;
         font-family: $mono-font;
+        border: 1px solid #fae8b7;
 
         @media (min-width: 768px) {
           width: 40vw;
@@ -237,12 +239,21 @@ $total-width: 100vw;
       }
 
       .git {
-        color: $normal-theme-primary-color;
+        // color: $normal-theme-primary-color;
+        color: #fae8b7;
         background-color: transparent;
+        svg {
+          width: 24px;
+          height: 24px;
+          margin: 0.5em;
+          g {
+            fill: #fae8b7;
+          }
+        }
       }
       .depl {
-        color: $dark-theme-primary-color;
-        background-color: $normal-theme-primary-color;
+        color: #fae8b7;
+        background-color: rgba(137, 43, 226, 0.342);
       }
     }
   }

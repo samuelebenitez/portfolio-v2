@@ -4,8 +4,8 @@ const themeNormalColor = "#fae8b7";
 
 export const githubIcon = (
   <svg
-    width="24"
-    height="24"
+    width="36"
+    height="36"
     viewBox="0 0 256 249"
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="xMinYMin meet"
@@ -19,8 +19,8 @@ export const githubIcon = (
 
 export const linkedinIcon = (
   <svg
-    height="24"
-    width="24"
+    height="36"
+    width="36"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 256 256"
   >
