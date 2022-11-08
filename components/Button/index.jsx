@@ -28,7 +28,7 @@ export default function Button({ type, href, label, openMenu }) {
         return (
           <Link href={href}>
             <span className={`${style.button} ${style.selected}`}>
-              {label}{" "}
+              {label}
             </span>
           </Link>
         );

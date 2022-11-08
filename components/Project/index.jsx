@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 import style from "./style.module.scss";
 import { gsap, Expo } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Project({ proje }) {
@@ -49,9 +50,9 @@ export default function Project({ proje }) {
       <h2 className={style.project_title}>{title}</h2>
       <p className={style.project_desc}>{description}</p>
       <div className={style.project_buttons}>
-        <a className={style.link} href={`/Demos/${id}`}>
-          <button className={style.button}>⬳</button>
-        </a>
+        <Link href={`/Demos/${id}`}>
+          <button className={`${style.button} ${style.link}`}>⬳</button>
+        </Link>
       </div>
     </div>
   );

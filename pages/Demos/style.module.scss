@@ -18,13 +18,13 @@ $total-width: 100vw;
   background-position: -20px -40vw;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1em;
   width: 100vw;
   min-height: 100vh;
-  overflow-x: hidden;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: center;
+    overflow-x: hidden;
   }
 
   .title_container {
@@ -183,7 +183,7 @@ $total-width: 100vw;
       transform: scaleY(1.2);
       @media (min-width: 768px) {
         font-size: 1.2em;
-        width: 40vw;
+        width: 35vw;
         font-weight: 300;
         transform: scaleY(1);
       }
@@ -194,7 +194,6 @@ $total-width: 100vw;
       justify-content: center;
       @media (min-width: 768px) {
         font-size: 1.3em;
-        width: 40vw;
       }
       span {
         svg {
@@ -215,7 +214,7 @@ $total-width: 100vw;
       @media (min-width: 768px) {
         flex-direction: row;
         justify-content: space-between;
-        margin: 1em;
+        padding: 1em;
       }
 
       .button {
@@ -234,7 +233,7 @@ $total-width: 100vw;
         border: 1px solid #fae8b7;
 
         @media (min-width: 768px) {
-          width: 40vw;
+          width: 15vw;
         }
       }
 

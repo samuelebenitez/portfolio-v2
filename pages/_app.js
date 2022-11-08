@@ -3,47 +3,12 @@ import Header from "../components/Header";
 import SidebarMenu from "../components/SidebarMenu";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { SwitchTransition, Transition } from "react-transition-group";
-import { gsap, Power3 } from "gsap";
+import { motion, AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const router = useRouter();
-
-  const onPageEnter = (node) => {
-    gsap.fromTo(
-      node,
-      {
-        y: 50,
-        autoAlpha: 0,
-        ease: "power3",
-      },
-      {
-        y: 0,
-        autoAlpha: 1,
-        duration: 1,
-        ease: "power3",
-      }
-    );
-  };
-
-  const onPageExit = (node) => {
-    gsap.fromTo(
-      node,
-      {
-        y: 0,
-        autoAlpha: 1,
-        ease: "power3.out",
-      },
-      {
-        y: -50,
-        autoAlpha: 0,
-        duration: 0.5,
-        ease: "power3.inOut",
-      }
-    );
-  };
 
   function openMenu() {
     setIsOpen((prevState) => !prevState);
@@ -51,26 +16,40 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <SwitchTransition>
-        <Transition
-          key={router.pathname}
-          timeout={500}
-          in={true}
-          onEnter={onPageEnter}
-          onExit={onPageExit}
-          mountOnEnter={true}
-          unmountOnExit={true}
-        >
-          <>
-            <Header openMenu={openMenu} isOpen={isOpen} />
-            {!isOpen ? (
+      <Header openMenu={openMenu} isOpen={isOpen} />
+      {!isOpen ? (
+        <>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={router.route}
+              initial="initialState"
+              animate="animateState"
+              exit="exitState"
+              transition={{
+                duration: 0.5,
+              }}
+              variants={{
+                initialState: {
+                  opacity: 0,
+                  x: 0,
+                },
+                animateState: {
+                  opacity: 1,
+                  x: 0,
+                },
+                exitState: {
+                  opacity: 0,
+                  x: -200,
+                },
+              }}
+            >
               <Component {...pageProps} />
-            ) : (
-              <SidebarMenu openMenu={openMenu} />
-            )}
-          </>
-        </Transition>
-      </SwitchTransition>
+            </motion.div>
+          </AnimatePresence>
+        </>
+      ) : (
+        <SidebarMenu openMenu={openMenu} />
+      )}
     </>
   );
 }
