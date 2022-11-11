@@ -5,7 +5,7 @@ $serif-font: "Yeseva One", cursive;
   padding: 2em 1em 0 1em;
   border-radius: 24px;
   box-shadow: -1px 3px 28px 7px rgba(0, 0, 0, 0.75);
-
+  z-index: 199;
   background-color: rgb(44 18 68);
   background-blend-mode: multiply;
   display: flex;
@@ -15,7 +15,7 @@ $serif-font: "Yeseva One", cursive;
   gap: 2.5em;
   width: 90vw;
   overflow: hidden;
-
+  cursor: default;
   @media (min-width: 768px) {
     width: 28vw;
   }
@@ -54,7 +54,6 @@ $serif-font: "Yeseva One", cursive;
       transform: rotateZ(180deg) scaleX(2);
       animation: flicker-4 4s ease-in infinite both;
       color: rgb(205, 175, 233);
-      z-index: 200;
 
       text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
         0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px rgb(252, 165, 247),

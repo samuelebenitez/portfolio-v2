@@ -11,6 +11,7 @@ import {
 import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
+// import SmoothScroll from "../components/SmoothScroll";
 
 function MyApp({ Component, pageProps }) {
   const [isOpen, setIsOpen] = useState(false);

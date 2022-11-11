@@ -5,6 +5,12 @@ import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import Badge from "../components/Badge";
 
+import { useRef, useEffect } from "react";
+
+import { gsap, Expo } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Home() {
   return (
     <main className={style.container}>
