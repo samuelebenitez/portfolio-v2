@@ -12,7 +12,6 @@ export default function Header({ openMenu, isOpen }) {
   const router = useRouter();
   const headerRef = useRef();
 
-
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(
@@ -67,7 +66,7 @@ export default function Header({ openMenu, isOpen }) {
         ) : (
           <>
             <div className={style.header_brand}>
-              <p>⚜</p>
+              <p>SEB`s</p>
             </div>
             <div className={style.header_nav}>
               <button onClick={() => openMenu(true)} className={style.button}>

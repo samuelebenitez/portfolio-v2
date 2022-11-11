@@ -30,7 +30,7 @@ $serif-font: "Yeseva One", cursive;
       padding: 1em;
     }
     .header_brand > p {
-      font-size: 2.5em;
+      font-size: 2em;
       color: blueviolet;
       font-family: $serif-font;
 
@@ -128,6 +128,10 @@ $serif-font: "Yeseva One", cursive;
         99.62% {
           opacity: 1;
         }
+      }
+
+      @media (min-width: 768px) {
+        font-size: 2.5em;
       }
     }
     .header_nav {

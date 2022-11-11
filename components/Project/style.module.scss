@@ -54,6 +54,7 @@ $serif-font: "Yeseva One", cursive;
       transform: rotateZ(180deg) scaleX(2);
       animation: flicker-4 4s ease-in infinite both;
       color: rgb(205, 175, 233);
+      z-index: 200;
 
       text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
         0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px rgb(252, 165, 247),
