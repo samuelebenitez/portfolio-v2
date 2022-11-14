@@ -18,10 +18,11 @@ const Letter = ({ space, letter, font }) => {
           y: 0,
           opacity: 1,
           delay: 0.5,
-          ease: "expo.easeOut",
+          ease: "Expo.easeOut",
           duration: 0.7,
           stagger: {
-            each: 0.05,
+            each: 0.6,
+            delay: 0.2,
           },
         }
       );

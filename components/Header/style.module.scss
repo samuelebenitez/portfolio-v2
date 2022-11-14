@@ -25,6 +25,9 @@ $serif-font: "Yeseva One", cursive;
     @media (min-width: 768px) {
       padding: 0;
     }
+    .header_back {
+      cursor: pointer;
+    }
     .header_brand {
       display: flex;
       align-items: center;

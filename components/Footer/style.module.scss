@@ -21,6 +21,7 @@ $serif-font: "Yeseva One", cursive;
     align-items: center;
     justify-content: center;
     gap: 0.5em;
+    z-index: 199;
   }
   .icon > p {
     font-family: $mono-font;

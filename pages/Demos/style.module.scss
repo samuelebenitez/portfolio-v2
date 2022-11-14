@@ -19,8 +19,8 @@ $total-width: 100vw;
   display: flex;
   flex-direction: column;
   gap: 3em;
-  width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: center;
@@ -47,6 +47,10 @@ $total-width: 100vw;
       font-family: $serif-font;
       text-transform: uppercase;
       transform: scaleY(2);
+      font-size: 2em;
+      @media (min-width: 768px) {
+        font-size: 3em;
+      }
     }
     .arrows {
       display: flex;
@@ -182,8 +186,9 @@ $total-width: 100vw;
       font-family: $mono-font;
       font-weight: 200;
       transform: scaleY(1.2);
+      text-align: center;
       @media (min-width: 768px) {
-        font-size: 1.2em;
+        font-size: 1.5em;
 
         font-weight: 300;
         transform: scaleY(1);
@@ -235,6 +240,8 @@ $total-width: 100vw;
 
         @media (min-width: 768px) {
           width: 15vw;
+
+          font-size: 1.3em;
         }
       }
 

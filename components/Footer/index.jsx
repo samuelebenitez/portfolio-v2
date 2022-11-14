@@ -7,10 +7,22 @@ export default function Footer() {
       <hr className={style.hr} />
       <div className={style.footer_container}>
         <div className={style.icon}>
-          <span>{githubIcon}</span>
+          <a
+            rel="noreferrer noopener"
+            target="_blank"
+            href="https://github.com/samuelebenitez"
+          >
+            <span>{githubIcon}</span>
+          </a>
         </div>
         <div className={style.icon}>
-          <span>{linkedinIcon}</span>
+          <a
+            rel="noreferrer noopener"
+            target="_blank"
+            href="https://www.linkedin.com/in/samuelebenitez"
+          >
+            <span>{linkedinIcon}</span>
+          </a>
         </div>
       </div>
     </>

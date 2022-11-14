@@ -9,7 +9,6 @@ import {
   forwardRef,
 } from "react";
 import { useRouter } from "next/router";
-import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 // import SmoothScroll from "../components/SmoothScroll";
 
@@ -73,37 +72,13 @@ function MyApp({ Component, pageProps }) {
       <Header openMenu={openMenu} isOpen={isOpen} />
       {!isOpen ? (
         <>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={router.route}
-              initial="initialState"
-              animate="animateState"
-              exit="exitState"
-              transition={{
-                duration: 0.5,
-              }}
-              variants={{
-                initialState: {
-                  opacity: 0,
-                  x: 0,
-                },
-                animateState: {
-                  opacity: 1,
-                  x: 0,
-                },
-                exitState: {
-                  opacity: 0,
-                  x: -200,
-                },
-              }}
-            >
-              <Component {...pageProps} />
+          <>
+            <Component {...pageProps} />
 
-              <Circle size="sm" ref={addCircleRef} delay={0.1} />
-              <Circle size="md" ref={addCircleRef} delay={0.2} />
-              <Circle size="lg" ref={addCircleRef} delay={0.3} />
-            </motion.div>
-          </AnimatePresence>
+            <Circle size="sm" ref={addCircleRef} delay={0.1} />
+            <Circle size="md" ref={addCircleRef} delay={0.2} />
+            <Circle size="lg" ref={addCircleRef} delay={0.3} />
+          </>
         </>
       ) : (
         <SidebarMenu openMenu={openMenu} />

@@ -2,28 +2,26 @@ import style from "./style.module.scss";
 import { gsap, Expo } from "gsap";
 import { useRef, useEffect } from "react";
 import Letter from "../Letter";
-import Circle from "../Circle";
 
 export default function Hero() {
   const box = useRef();
   const spanRef = useRef();
 
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.fromTo(
-        box.current,
-        { yPercent: -10, ease: "expo.easeOut" },
-        { duration: 1, delay: 0.2, opacity: 1, yPercent: 0 }
-      );
-      gsap.fromTo(
-        spanRef.current,
-        { yPercent: -5, ease: "expo.easeOut" },
-        { duration: 2, delay: 0.2, opacity: 1, yPercent: 0 }
-      );
-    }, []);
-
-    return () => ctx.revert();
-  }, []);
+  // useEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     gsap.fromTo(
+  //       box.current,
+  //       { yPercent: 0, ease: "expo.easeOut" },
+  //       { duration: 1, delay: 0.2, opacity: 1, yPercent: 0 }
+  //     );
+  //     gsap.fromTo(
+  //       spanRef.current,
+  //       { yPercent: 0, ease: "expo.easeOut" },
+  //       { duration: 2, delay: 0.2, opacity: 1, yPercent: 0 }
+  //     );
+  //   }, []);
+  //   return () => ctx.revert();
+  // }, []);
 
   return (
     <div className={style.hero}>
