@@ -145,7 +145,7 @@ export default function About() {
         height="100%"
       ></iframe> */}
 
-      <Flyier label="• About  • About  • About  • About  • About  • About  • About • About • About  " />
+      <Flyier label="• About  • About  • About  • About  • About  • About  • About • About • About • About  " />
       <div className={style.about_first}>
         <div ref={imageRef} className={style.crazy}>
           <Image src={profilepic} alt="profilepic " />
