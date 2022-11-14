@@ -2,6 +2,7 @@ import Image from "next/image";
 import Flyier from "../components/Flyier";
 import style from "../styles/About.module.scss";
 import profilepic from "../public/profilepic.jpg";
+
 import { useRef, useEffect } from "react";
 import { gsap, Expo } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -144,10 +145,14 @@ export default function About() {
         height="100%"
       ></iframe> */}
 
-      <Flyier label="• About  • About  • About  • About  • About  • About  • About • About • About • About  " />
+      <Flyier label="• About  • About  • About  • About  • About  • About  • About • About • About  " />
       <div className={style.about_first}>
         <div ref={imageRef} className={style.crazy}>
-          <Image src={profilepic} alt="profilepic " />
+          <Image
+            src="https://i.ibb.co/q51y4f0/profile-pic.jpg"
+            layout="fill"
+            alt="profilepic "
+          />
         </div>
         <div className={style.info}>
           <p ref={infoRef}>

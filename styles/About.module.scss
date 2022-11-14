@@ -23,16 +23,20 @@ $serif-font: "Yeseva One", cursive;
     }
     .crazy {
       width: 90vw;
+      height: 40vh;
       overflow: hidden;
       border-radius: 40% 3% 40% 3%;
-
+      object-fit: contain;
       @media (min-width: 768px) {
         width: 40vw;
+
+        height: 50vh;
       }
       span {
         img {
           filter: grayscale(1);
           padding: 0 0.5em;
+          object-fit: cover;
         }
       }
     }
