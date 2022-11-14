@@ -2,7 +2,6 @@ import Image from "next/image";
 import Flyier from "../components/Flyier";
 import style from "../styles/About.module.scss";
 import profilepic from "../public/profilepic.jpg";
-
 import { useRef, useEffect } from "react";
 import { gsap, Expo } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
