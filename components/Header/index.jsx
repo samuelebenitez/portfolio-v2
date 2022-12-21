@@ -54,7 +54,7 @@ export default function Header({ openMenu, isOpen }) {
   const buttonsName = [
     { name: "home", path: "/" },
     { name: "about", path: "/about" },
-    { name: "others", path: "/others" },
+    // { name: "others", path: "/others" },
   ];
 
   return (
@@ -62,7 +62,7 @@ export default function Header({ openMenu, isOpen }) {
       <div className={style.inner_container}>
         <>
           <div className={style.header_brand}>
-            <p>SEB`s</p>
+            <Link href="/">SEB`s</Link>
           </div>
           <div className={style.header_nav}>
             <button onClick={() => openMenu(true)} className={style.button}>

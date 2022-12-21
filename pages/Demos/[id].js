@@ -9,6 +9,7 @@ import {
   nextjsIcon,
   backIcon,
   githubIcon,
+  openNewWindow,
 } from "../../public/svg-resources.js";
 
 export default function ProjectPage() {
@@ -121,7 +122,7 @@ export default function ProjectPage() {
                 className={`${style.button} ${style.depl} `}
                 rel="noopener noreferrer"
               >
-                Website ⭧
+                Website {openNewWindow}
               </a>
               <a
                 target="_blank"

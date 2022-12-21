@@ -159,9 +159,12 @@ $total-width: 100vw;
       flex-direction: column;
       box-shadow: -1px 3px 28px 7px rgba(0, 0, 0, 0.75);
       margin: -1.5em 0;
+
+      border-radius: 40% 3% 40% 3%;
       .img1 {
         width: 100%;
-        border-radius: 8px;
+
+        border-radius: 40% 3% 40% 3%;
         filter: sepia(0.8);
         @media (min-width: 768px) {
           width: 100%;
