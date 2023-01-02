@@ -2,10 +2,14 @@ import style from "./style.module.scss";
 import { gsap, Expo } from "gsap";
 import { useRef, useEffect } from "react";
 import Letter from "../Letter";
+import Circle from "../Circle";
+import { flowAnimation } from "../../public/svg-resources";
 
 export default function Hero() {
   const box = useRef();
   const spanRef = useRef();
+
+  const letterRef = useRef();
 
   // useEffect(() => {
   //   let ctx = gsap.context(() => {
@@ -31,9 +35,21 @@ export default function Hero() {
             .split("")
             .map((i, key) =>
               i == " " ? (
-                <Letter key={key} space={true} letter={i} font="sans" />
+                <Letter
+                  key={key}
+                  space={true}
+                  letter={i}
+                  font="sans"
+                  letterRef={letterRef}
+                />
               ) : (
-                <Letter key={key} space={false} letter={i} font="sans" />
+                <Letter
+                  key={key}
+                  space={false}
+                  letter={i}
+                  font="sans"
+                  letterRef={letterRef}
+                />
               )
             )}
         </span>
@@ -42,9 +58,21 @@ export default function Hero() {
             .split("")
             .map((i, key) =>
               i == " " ? (
-                <Letter key={key} space={true} letter={i} font="serif" />
+                <Letter
+                  key={key}
+                  space={true}
+                  letter={i}
+                  font="serif"
+                  letterRef={letterRef}
+                />
               ) : (
-                <Letter key={key} space={false} letter={i} font="serif" />
+                <Letter
+                  key={key}
+                  space={false}
+                  letter={i}
+                  font="serif"
+                  letterRef={letterRef}
+                />
               )
             )}
         </h1>
@@ -52,12 +80,11 @@ export default function Hero() {
         <div className={style.hero_content}>
           <span className={style.hero_desc}>
             I’m a front-end developer based in Buenos Aires, Argentina. I’m
-            interested in creative coding, animations, web3 and the whole crypto
-            thing (?)
+            interested in creative coding, animations, web3 and Big Data
           </span>
         </div>
       </div>
-      <div className={style.flyer}></div>
+      {/* <div className={style.flyer}>{flowAnimation}</div> */}
     </div>
   );
 }

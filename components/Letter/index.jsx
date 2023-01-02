@@ -2,34 +2,27 @@ import style from "./style.module.scss";
 import { gsap, Expo } from "gsap";
 import { useEffect, useRef } from "react";
 
-const Letter = ({ space, letter, font }) => {
-  const letterRef = useRef();
-
+const Letter = ({ space, letter, font, letterRef }) => {
+  console.log(letterRef.current);
   useEffect(() => {
-    let ctx = gsap.context(() => {
-      let textAnimation = gsap.timeline();
-      textAnimation.fromTo(
-        letterRef.current,
-        {
-          y: 100,
-          opacity: 0,
+    gsap.fromTo(
+      letterRef.current,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        ease: "Expo.easeOut",
+        duration: 0.7,
+        stagger: {
+          each: 0.6,
+          delay: 0.2,
         },
-        {
-          y: 0,
-          opacity: 1,
-          delay: 0.5,
-          ease: "Expo.easeOut",
-          duration: 0.7,
-          stagger: {
-            each: 0.6,
-            delay: 0.2,
-          },
-        }
-      );
-    }, []);
-
-    return () => ctx.revert();
-  }, []);
+      }
+    );
+  }, [letterRef]);
 
   return space == true ? (
     <div ref={letterRef} className={style.letter}>

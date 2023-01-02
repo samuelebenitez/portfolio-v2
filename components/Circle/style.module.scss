@@ -9,16 +9,15 @@
 
   @keyframes spin {
     from {
-      transform: rotate(0deg);
+      transform: rotateZ(0deg);
     }
     to {
-      transform: rotate(360deg);
+      transform: rotateZ(360deg);
     }
   }
-}
-
-.circle > span {
-  position: absolute;
-  margin: 2px;
-  font-family: "Josefin Sans", sans-serif;
+  span {
+    position: absolute;
+    margin: 2px;
+    font-family: "Josefin Sans", sans-serif;
+  }
 }

@@ -13,24 +13,29 @@ $serif-font: "Yeseva One", cursive;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  padding: 20vh 0 0 0;
+  @media (min-width: 768px) {
+    padding: 20vh 2em 0 2em;
+    background-size: cover;
+  }
 
   .about_first {
     display: flex;
     flex-direction: column;
     align-items: centeR;
+
     @media (min-width: 768px) {
       flex-direction: row;
+      width: 90vw;
     }
-    .crazy {
+    .profile_pic {
       width: 90vw;
       height: 40vh;
       overflow: hidden;
       border-radius: 40% 3% 40% 3%;
       object-fit: contain;
       @media (min-width: 768px) {
-        width: 40vw;
-
-        height: 50vh;
+        height: 60vh;
       }
       span {
         img {
@@ -44,7 +49,6 @@ $serif-font: "Yeseva One", cursive;
       width: 100vw;
       padding: 2em 1em;
       @media (min-width: 768px) {
-        width: 50vw;
       }
       p {
         font-family: $mono-font;
@@ -53,9 +57,8 @@ $serif-font: "Yeseva One", cursive;
         line-height: 1.5em;
         padding: 1em 0;
         color: #fae8b7;
-        transform: scaleY(1.1);
         @media (min-width: 768px) {
-          font-size: 1.3em;
+          font-size: 1.5em;
           padding: 0.5em 0;
         }
       }
@@ -77,9 +80,10 @@ $serif-font: "Yeseva One", cursive;
       padding: 1em;
       .title {
         font-family: $serif-font;
-        transform: scaleY(1.5);
-        text-align: centeR;
+        text-align: center;
         letter-spacing: 5px;
+
+        color: #fae8b7;
         @media (min-width: 768px) {
           margin: 1em 0;
           text-align: left;
@@ -88,7 +92,7 @@ $serif-font: "Yeseva One", cursive;
     }
     .icons_container {
       display: flex;
-      align-items: centeR;
+      align-items: center;
       gap: 3em;
       margin: 2em 0;
       @media (min-width: 768px) {

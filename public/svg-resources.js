@@ -141,3 +141,103 @@ export const openNewWindow = (
     ></path>
   </svg>
 );
+
+export const flowAnimation = (
+  <svg
+    version="1.1"
+    x="0px"
+    y="0px"
+    width="887.56"
+    height="364.53"
+    viewBox="0 0 887.56 364.53"
+    enable-background="new 0 0 887.56 364.53"
+  >
+    <path
+      id="path-to-trace-1"
+      fill="none"
+      stroke="#95ACB8"
+      stroke-width="2"
+      d="M0,5c41.21,0,62.8,36.94,99.42,95.5c40.21,64.31,101.21,81.76,142.21,81.76 h98c41,0,117-17.46,157.21-81.76C533.47,41.94,582.21,5,628.4,5c46.2,0,75.19,40.14,116.49,95.5 c44.04,59.03,101.67,81.76,142.67,81.76"
+    ></path>
+    <path
+      id="path-to-trace-2"
+      fill="none"
+      stroke="#95ACB8"
+      stroke-width="2"
+      d="M0,359.53c41.21,0,62.8-36.94,99.42-95.5 c40.21-64.31,101.21-81.76,142.21-81.76h98c41,0,117,17.46,157.21,81.76c36.62,58.56,70.75,95.5,131.25,95.5 c49.97,0,75.45-37.9,116.79-95.5c44.23-61.62,101.67-81.76,142.67-81.76"
+    ></path>
+    <path
+      id="path-to-trace-3"
+      fill="none"
+      stroke="#95ACB8"
+      stroke-width="2"
+      d="M0,182.24 885.22,182.24"
+    ></path>
+    <path
+      id="path-to-trace-4"
+      fill="none"
+      stroke="#95ACB8"
+      stroke-width="2"
+      d="M0,94.09c23.14,0,47.44,23.7,75.14,45.17c41.93,32.5,111.03,43,166.03,43 h120.18c55,0,124.1-10.5,166.03-43c27.7-21.47,61.38-45.17,101.01-45.17c39.63,0,65.43,23.7,93.13,45.17 c41.93,32.5,111.03,43,166.03,43"
+    ></path>
+    <path
+      id="path-to-trace-5"
+      fill="none"
+      stroke="#95ACB8"
+      stroke-width="2"
+      d="M0,270.42c21.1,0,53.44-27.16,68.83-40.21 c30.26-25.67,88.21-48.19,164.23-48.19s81.25,0,115.14,0s117.05,1.92,165.97,34.22s71.11,54.18,113.92,54.18 c35.5,0,46.66-6.57,95.57-46.79c24.43-20.09,80.93-41.38,161.55-41.38"
+    ></path>
+
+    <circle cx="" cy="" r="4" fill="#122E44">
+      <animateMotion begin="2.1s" dur="4s" repeatCount="indefinite">
+        <mpath></mpath>
+      </animateMotion>
+    </circle>
+    <circle cx="" cy="" r="4" fill="#122E44">
+      <animateMotion begin="2.8s" dur="4s" repeatCount="indefinite">
+        <mpath></mpath>
+      </animateMotion>
+    </circle>
+    <circle cx="" cy="" r="4" fill="#122E44">
+      <animateMotion begin="2.6s" dur="4s" repeatCount="indefinite">
+        <mpath></mpath>
+      </animateMotion>
+    </circle>
+    <circle cx="" cy="" r="4" fill="#122E44">
+      <animateMotion begin="3.0s" dur="4s" repeatCount="indefinite">
+        <mpath></mpath>
+      </animateMotion>
+    </circle>
+    <circle cx="" cy="" r="4" fill="#122E44">
+      <animateMotion begin="2.3s" dur="4s" repeatCount="indefinite">
+        <mpath></mpath>
+      </animateMotion>
+    </circle>
+
+    <circle cx="" cy="" r="4" fill="#122E44">
+      <animateMotion begin="4.6s" dur="4s" repeatCount="indefinite">
+        <mpath></mpath>
+      </animateMotion>
+    </circle>
+    <circle cx="" cy="" r="4" fill="#122E44">
+      <animateMotion begin="4.3s" dur="4s" repeatCount="indefinite">
+        <mpath></mpath>
+      </animateMotion>
+    </circle>
+    <circle cx="" cy="" r="4" fill="#122E44">
+      <animateMotion begin="4.1s" dur="4s" repeatCount="indefinite">
+        <mpath></mpath>
+      </animateMotion>
+    </circle>
+    <circle cx="" cy="" r="4" fill="#122E44">
+      <animateMotion begin="5.0s" dur="4s" repeatCount="indefinite">
+        <mpath></mpath>
+      </animateMotion>
+    </circle>
+    <circle cx="" cy="" r="4" fill="#122E44">
+      <animateMotion begin="4.8s" dur="4s" repeatCount="indefinite">
+        <mpath></mpath>
+      </animateMotion>
+    </circle>
+  </svg>
+);

@@ -160,11 +160,9 @@ $total-width: 100vw;
       box-shadow: -1px 3px 28px 7px rgba(0, 0, 0, 0.75);
       margin: -1.5em 0;
 
-      border-radius: 40% 3% 40% 3%;
       .img1 {
         width: 100%;
 
-        border-radius: 40% 3% 40% 3%;
         filter: sepia(0.8);
         @media (min-width: 768px) {
           width: 100%;
@@ -239,7 +237,95 @@ $total-width: 100vw;
         height: 10vh;
         text-transform: capitalize;
         font-family: $mono-font;
-        border: 1px solid #fae8b7;
+
+        animation: flicker-4 4s ease-in infinite both;
+        color: rgb(205, 175, 233);
+
+        text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+          0 0 42px rgb(236, 175, 231), 0 0 82px rgb(247, 185, 247),
+          0 0 92px rgb(255, 178, 249), 0 0 102px rgb(252, 165, 247),
+          0 0 151px rgb(243, 110, 225);
+
+        outline: none;
+
+        @keyframes flicker-4 {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          31.98% {
+            opacity: 1;
+          }
+          32% {
+            opacity: 0;
+          }
+          32.8% {
+            opacity: 0;
+          }
+          32.82% {
+            opacity: 1;
+          }
+          34.98% {
+            opacity: 1;
+          }
+          35% {
+            opacity: 0;
+          }
+          35.7% {
+            opacity: 0;
+          }
+          35.72% {
+            opacity: 1;
+          }
+          36.98% {
+            opacity: 1;
+          }
+          37% {
+            opacity: 0;
+          }
+          37.6% {
+            opacity: 0;
+          }
+          37.62% {
+            opacity: 1;
+          }
+          67.98% {
+            opacity: 1;
+          }
+          68% {
+            opacity: 0;
+          }
+          68.4% {
+            opacity: 0;
+          }
+          68.42% {
+            opacity: 1;
+          }
+          95.98% {
+            opacity: 1;
+          }
+          96% {
+            opacity: 0;
+          }
+          96.7% {
+            opacity: 0;
+          }
+          96.72% {
+            opacity: 1;
+          }
+          98.98% {
+            opacity: 1;
+          }
+          99% {
+            opacity: 0;
+          }
+          99.6% {
+            opacity: 0;
+          }
+          99.62% {
+            opacity: 1;
+          }
+        }
 
         @media (min-width: 768px) {
           width: 15vw;
@@ -251,7 +337,6 @@ $total-width: 100vw;
       .git {
         // color: $normal-theme-primary-color;
         color: #fae8b7;
-        background-color: transparent;
         svg {
           width: 24px;
           height: 24px;
@@ -263,7 +348,6 @@ $total-width: 100vw;
       }
       .depl {
         color: #fae8b7;
-        background-color: rgba(137, 43, 226, 0.342);
       }
     }
   }

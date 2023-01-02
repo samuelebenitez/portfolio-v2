@@ -27,7 +27,7 @@ $serif-font: "Yeseva One", cursive;
       overflow: hidden;
       text-transform: uppercase;
       @media (min-width: 425px) {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
       }
       @media (min-width: 1024px) {
         font-weight: 500;
@@ -62,11 +62,12 @@ $serif-font: "Yeseva One", cursive;
         display: flex;
         flex-direction: row;
         overflow: hidden;
+        line-height: 1.2em;
         @media (min-width: 425px) {
           font-size: 1.7rem;
         }
         @media (min-width: 1024px) {
-          width: 60vw;
+          width: 50vw;
         }
       }
     }

@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main className={style.container}>
       <Hero />
-      <Flyier label="• Demos • Demos • Demos • Demos • Demos • Demos • Demos " />
+      <Flyier label="• Demos • Demos • Demos • Demos • Demos • Demos • Demos • Demos • Demos " />
       <Projects />
       <Badge />
       <Footer />

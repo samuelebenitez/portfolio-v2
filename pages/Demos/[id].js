@@ -122,7 +122,7 @@ export default function ProjectPage() {
                 className={`${style.button} ${style.depl} `}
                 rel="noopener noreferrer"
               >
-                Website {openNewWindow}
+                Website 
               </a>
               <a
                 target="_blank"
@@ -130,7 +130,7 @@ export default function ProjectPage() {
                 className={`${style.button} ${style.git} `}
                 rel="noopener noreferrer"
               >
-                Code {githubIcon}
+                Code 
               </a>
             </div>
           </div>

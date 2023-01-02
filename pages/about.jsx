@@ -146,7 +146,7 @@ export default function About() {
 
       <Flyier label="• About  • About  • About  • About  • About  • About  • About • About • About  " />
       <div className={style.about_first}>
-        <div ref={imageRef} className={style.crazy}>
+        <div ref={imageRef} className={style.profile_pic}>
           <Image
             src="https://i.ibb.co/q51y4f0/profile-pic.jpg"
             layout="fill"
