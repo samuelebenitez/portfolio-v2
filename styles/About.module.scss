@@ -1,6 +1,7 @@
 $mono-font: "Josefin Sans", sans-serif;
 $serif-font: "Yeseva One", cursive;
-
+$melodrama: "Melodrama", cursive;
+$nunito: "Nunito", sans-serif;
 .about_container {
   min-height: 100vh;
   padding: 17vh 0 0 0;
@@ -47,14 +48,13 @@ $serif-font: "Yeseva One", cursive;
     }
     .info {
       width: 100vw;
-      padding: 2em 1em;
+      padding: 1em;
       @media (min-width: 768px) {
       }
       p {
-        font-family: $mono-font;
-        font-weight: 300;
+        font-family: $nunito;
+
         font-size: 1.3em;
-        line-height: 1.5em;
         padding: 1em 0;
         color: #fae8b7;
         @media (min-width: 768px) {
@@ -79,7 +79,7 @@ $serif-font: "Yeseva One", cursive;
     .title_container {
       padding: 1em;
       .title {
-        font-family: $serif-font;
+        font-family: $melodrama;
         text-align: center;
         letter-spacing: 5px;
 

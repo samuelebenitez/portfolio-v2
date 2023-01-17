@@ -1,11 +1,21 @@
+$melodrama: "Melodrama", cursive;
+$nunito: "Nunito", sans-serif;
+
 .flyier_container {
   width: 100vw;
-  font-size: 3em;
-  font-family: "Yeseva One", cursive;
-  margin: 1em 0;
+  font-size: 4rem;
+  font-family: $melodrama;
+  margin: 0.5em 0 0 0;
   overflow: hidden;
   white-space: pre;
-  transform: scaleY(3);
   opacity: 0;
   color: #fae8b7;
+  font-weight: bold;
+
+  @media (min-width: 425px) {
+    font-size: 5rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 6rem;
+  }
 }

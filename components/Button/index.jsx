@@ -12,16 +12,12 @@ export default function Button({ type, href, label, openMenu }) {
   const letterRef = useRef();
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.from(buttonRef.current, {
-        duration: 1.5,
-        yPercent: 0,
-        ease: "power4",
-        stagger: 0.09,
-      });
-    }, []);
-
-    return () => ctx.revert();
+    gsap.from(buttonRef.current, {
+      duration: 1.5,
+      yPercent: 0,
+      ease: "power4",
+      stagger: 0.09,
+    });
   }, []);
 
   switch (type) {
@@ -29,13 +25,13 @@ export default function Button({ type, href, label, openMenu }) {
       if (router.asPath == href) {
         return (
           <Link href={href}>
-            <span className={`${style.button} ${style.selected}`}>{label}</span>
+            <p className={`${style.button} ${style.selected}`}>{label}</p>
           </Link>
         );
       } else {
         return (
           <Link href={href}>
-            <span className={style.button}>{label} </span>
+            <p className={style.button}>{label} </p>
           </Link>
         );
       }
@@ -43,7 +39,7 @@ export default function Button({ type, href, label, openMenu }) {
       if (router.asPath == href) {
         return (
           <Link href={href}>
-            <span
+            <p
               ref={buttonRef}
               className={`${style.button_sidebar} ${style.selected_sidebar}`}
               onClick={() => openMenu(false)}
@@ -67,13 +63,13 @@ export default function Button({ type, href, label, openMenu }) {
                     />
                   )
                 )}
-            </span>
+            </p>
           </Link>
         );
       } else {
         return (
           <Link href={href}>
-            <span
+            <p
               onClick={() => openMenu(false)}
               ref={buttonRef}
               className={style.button_sidebar}
@@ -97,7 +93,7 @@ export default function Button({ type, href, label, openMenu }) {
                     />
                   )
                 )}
-            </span>
+            </p>
           </Link>
         );
       }

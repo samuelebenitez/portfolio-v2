@@ -10,6 +10,8 @@ import {
 } from "react";
 import { useRouter } from "next/router";
 import gsap from "gsap";
+
+import { AnimatePresence } from "framer-motion";
 // import SmoothScroll from "../components/SmoothScroll";
 
 function MyApp({ Component, pageProps }) {
@@ -73,7 +75,9 @@ function MyApp({ Component, pageProps }) {
       {!isOpen ? (
         <>
           <>
-            <Component {...pageProps} />
+            <AnimatePresence mode="wait" initial={true}>
+              <Component {...pageProps} key={router.asPath} />
+            </AnimatePresence>
 
             <Circle size="sm" ref={addCircleRef} delay={0.1} />
             <Circle size="md" ref={addCircleRef} delay={0.2} />

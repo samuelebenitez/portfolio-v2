@@ -1,17 +1,20 @@
 $mono-font: "Josefin Sans", sans-serif;
 $serif-font: "Yeseva One", cursive;
+$melodrama: "Melodrama", cursive;
+$nunito: "Nunito", sans-serif;
 
 .hero {
   display: flex;
+  width: 100%;
+  padding: 0 1em;
+  font-family: $nunito;
 
   .hero_container {
     width: 100%;
-    height: 60vh;
-
-    padding-inline: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 1em;
 
     @media (min-width: 1024px) {
       width: 70%;
@@ -20,12 +23,11 @@ $serif-font: "Yeseva One", cursive;
     .pretitle {
       color: #892be2a4;
       font-size: 1.1rem;
-      font-family: $mono-font;
-      font-weight: 300;
       display: flex;
       flex-direction: row;
       overflow: hidden;
       text-transform: uppercase;
+
       @media (min-width: 425px) {
         font-size: 1.25rem;
       }
@@ -34,10 +36,10 @@ $serif-font: "Yeseva One", cursive;
       }
     }
     .title {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       letter-spacing: -3px;
       font-weight: lighter;
-      font-family: $serif-font;
+      font-family: $melodrama;
       margin: 0.2em 0 0.5em 0;
       color: #fae8b7;
       display: flex;
@@ -45,26 +47,26 @@ $serif-font: "Yeseva One", cursive;
       overflow: hidden;
 
       @media (min-width: 425px) {
-        font-size: 3rem;
+        font-size: 3.5rem;
+      }
+      @media (min-width: 768px) {
+        font-size: 4.5rem;
       }
       @media (min-width: 1024px) {
-        font-size: 5rem;
+        font-size: 6rem;
       }
     }
     .hero_content {
-      width: 90vw;
       .hero_desc {
-        width: 90vw;
-        font-size: 1.5em;
-        font-weight: 300;
-        font-family: $mono-font;
+        font-size: 1.1em;
         color: #fae8b7;
         display: flex;
         flex-direction: row;
         overflow: hidden;
-        line-height: 1.2em;
+        font-weight: lighter;
+
         @media (min-width: 425px) {
-          font-size: 1.7rem;
+          font-size: 1.3rem;
         }
         @media (min-width: 1024px) {
           width: 50vw;
@@ -73,6 +75,10 @@ $serif-font: "Yeseva One", cursive;
     }
   }
   .flyer {
-    width: 30%;
+    width: 50%;
+    display: none;
+    @media (min-width: 1024px) {
+      display: block;
+    }
   }
 }

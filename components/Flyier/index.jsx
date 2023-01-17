@@ -8,16 +8,7 @@ export default function Flyier({ label }) {
   const wordRef = useRef();
 
   useEffect(() => {
-    let tl = gsap.timeline({
-      delay: 0.1,
-      scrollTrigger: {
-        trigger: wordRef.current,
-        start: "top bottom-=10%", // when the top of the trigger hits the top of the viewport
-        end: "+=500",
-      },
-    });
-
-    tl.fromTo(
+    gsap.fromTo(
       wordRef.current,
       {
         y: 100,

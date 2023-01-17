@@ -9,10 +9,25 @@
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  padding: 20vh 0 0 0;
+  padding: 25vh 0 0 0;
 
   @media (min-width: 768px) {
-    padding: 20vh 2em 0 2em;
+    padding: 25vh 2em 0 2em;
     background-size: cover;
+  }
+}
+
+.star {
+}
+.animated_path {
+  animation: draw infinite linear forwards;
+}
+
+@keyframes draw {
+  from {
+    transform: translateZ(0deg);
+  }
+  to {
+    transform: translateZ(20deg);
   }
 }

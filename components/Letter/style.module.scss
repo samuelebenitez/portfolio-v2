@@ -1,5 +1,8 @@
+$melodrama: "Melodrama", cursive;
+$nunito: "Nunito", sans-serif;
+
 .letter_serif {
-  font-family: "Yeseva One", cursive;
+  font-family: $melodrama;
 
   &:first-child {
     text-transform: uppercase;
@@ -7,7 +10,7 @@
 }
 
 .letter_sans {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: $nunito;
   &:first-child {
     text-transform: uppercase;
   }

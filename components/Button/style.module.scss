@@ -1,22 +1,25 @@
+$melodrama: "Melodrama", cursive;
+$nunito: "Nunito", sans-serif;
+
 .button {
   padding: 0.5em 1em;
   cursor: pointer;
-  font-family: "Josefin Sans", sans-serif;
   text-transform: capitalize;
-  font-weight: 300;
+
   color: #fae8b7;
+
+  font-family: $nunito;
 }
 
 .selected {
   border-bottom: 10px solid #892be2a4;
-  font-weight: 400;
-  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
 }
 
 .button_sidebar {
   cursor: pointer;
   padding: 0.5em 1em 0 1em;
-  font-family: "Yeseva One", cursive;
+
   font-size: 3em;
   color: #fae8b7;
 
